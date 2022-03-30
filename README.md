@@ -1,7 +1,7 @@
 ## :rocket:RetinaNet Oriented Detector Based PyTorch  
 This is an oriented detector **Rotation-RetinaNet** implementation on Optical and SAR **ship dataset**.  
-- SAR ship dataset (SSDD): [SSDD](https://github.com/TianwenZhang0825/Official-SSDD)  
-- Optical ship dataset (HRSC): [HRSC](https://www.kaggle.com/guofeng/hrsc2016)  
+- SAR ship dataset (SSDD): [SSDD Dataset link](https://github.com/TianwenZhang0825/Official-SSDD)  
+- Optical ship dataset (HRSC): [HRSC Dataset link](https://www.kaggle.com/guofeng/hrsc2016)  
 - RetinaNet Detector original paper link is [here](https://openaccess.thecvf.com/content_ICCV_2017/papers/Lin_Focal_Loss_for_ICCV_2017_paper.pdf).  
 ## :star2:Performance of the implemented Rotation-RetinaNet Detector
 
@@ -15,7 +15,7 @@ This is an oriented detector **Rotation-RetinaNet** implementation on Optical an
 
 | Dataset | Backbone | Input Size | bs | Trick | mAP.5 | Config |
 |:-------:|:--------:|:----------:|:--:|:-----:|:-----:|:------:|
-|  SSDD   | ResNet-50| 512 x 512  | 16 | N     | 78.96 |[config file](/configs/retinanet_r50_fpn_hrsc.yml)|
+|  SSDD   | ResNet-50| 512 x 512  | 16 | N     | 78.96 |[config file](/configs/retinanet_r50_fpn_ssdd.yml)|
 |  SSDD   | ResNet-50| 512 x 512  | 16 |Augment| 85.6  |[config file](/configs/retinanet_r50_fpn_ssdd.yml)|
 |  HRSC   | ResNet-50| 512 x 512  | 16 | N     | 70.71 |[config file](/configs/retinanet_r50_fpn_hrsc.yml)|
 |  HRSC   | ResNet-50| 512 x 512  | 4  | N     | 74.22 |[config file](/configs/retinanet_r50_fpn_hrsc.yml)|
@@ -87,7 +87,7 @@ $ROOT_PATH
 	-log.log (save the loss and eval result)
 	-yml file (config file)
 ```
-### B. Run the show.py.
+### B. Run the show.py
 ```
 # for SSDD dataset
 python show.py --config_file ./configs/retinanet_r50_fpn_ssdd.yml --chkpt {chkpt.file} --result_path show_result/RSSDD --pic_name demo1.jpg
@@ -107,9 +107,9 @@ you should manual set projcet's hyper parameters in `config` file.
 2. Other settings (Optional)
    if you want to follow my experiment, dont't change anything.
 ```
-### C. Train Rotation-RetinaNet detector on SSDD or HRSC dataset with pretrianed resnet-50 from scratch
+### C. Train Rotation-RetinaNet on SSDD or HRSC dataset with resnet-50 from scratch
 #### C.1 Download the pre-trained resnet-50 pth file
-you should download the pre-trained ImageNet Dataset resnet-50 pth file first and put this pth file in `resnet_pretrained_pth/` folder.
+you should download the pre-trained resnet-50 pth first and put the pth file in `resnet_pretrained_pth/` folder.
 #### C.2 Train Rotation-RetinaNet Detector on SSDD or HRSC Dataset with pre-trained pth file
 ```
 # train model on SSDD dataset from scratch
@@ -119,7 +119,7 @@ python train.py --config_file ./configs/retinanet_r50_fpn_ssdd.yml --resume None
 python train.py --config_file ./configs/retinanet_r50_hrsc.yml --resume None
 
 ```
-### D. Continue training Rotation-RetinaNet detector on SSDD or HRSC dataset
+### D. Resume training Rotation-RetinaNet detector on SSDD or HRSC dataset
 ```
 # train model on SSDD dataset from specific epoch
 python train.py --config_file ./configs/retinanet_r50_fpn_ssdd.yml --resume {epoch}_{step}.pth
