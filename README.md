@@ -6,7 +6,7 @@ RetinaNet Detector original paper link is [here](https://openaccess.thecvf.com/c
 ## :star2:Performance of the implemented Rotation-RetinaNet Detector
 
 ### Detection Performance on HRSC Dataset.
-<img src="./resource/HRSC_Result.png" width="500" height="500"/>
+<img src="./resource/HRSC_Result.png" width="800" height="500"/>
 
 ### Detection Performance on SSDD Dataset.
-<img src="./pics/RSSDD_Result.png" width="500" height="500"/>
+<img src="./resource/RSSDD_Result.png" width="800" height="500"/>
