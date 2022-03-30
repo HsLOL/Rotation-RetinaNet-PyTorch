@@ -140,3 +140,4 @@ Thanks for these great work.
 [https://github.com/ming71/Rotated-RetinaNet](https://github.com/ming71/Rotated-RetinaNet)
 
 ## :fast\_forward:Zhihu Link
+[zhihu article](https://zhuanlan.zhihu.com/p/490422549?)
