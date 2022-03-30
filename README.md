@@ -15,7 +15,7 @@ This is an oriented detector **Rotation-RetinaNet** implementation on Optical an
 
 | Dataset | Backbone | Input Size | bs | Trick | mAP.5 | Config |
 |:-------:|:--------:|:----------:|:--:|:-----:|:-----:|:------:|
-|  SSDD   | ResNet-50| 512 x 512  | 16 | N     | 78.96 |[config file]("./configs/retinanet_r50_fpn_ssdd.yml")|
+|  SSDD   | ResNet-50| 512 x 512  | 16 | N     | 78.96 |[config file]("https://github.com/HsLOL/Rotation-RetinaNet-PyTorch/blob/master/configs/retinanet_r50_fpn_hrsc.yml")|
 |  SSDD   | ResNet-50| 512 x 512  | 16 |Augment| 85.6  |[config file]("./configs/retinanet_r50_fpn_ssdd.yml")|
 |  HRSC   | ResNet-50| 512 x 512  | 16 | N     | 70.71 |[config file]("./configs/retinanet_r50_fpn_hrsc.yml")|
 |  HRSC   | ResNet-50| 512 x 512  | 4  | N     | 74.22 |[config file]("./configs/retinanet_r50_fpn_hrsc.yml")|
@@ -109,7 +109,7 @@ you should manual set projcet's hyper parameters in `config` file.
 ```
 ### C. Train Rotation-RetinaNet detector on SSDD or HRSC dataset with pretrianed resnet-50 from scratch
 #### C.1 Download the pre-trained resnet-50 pth file
-you should download the pre-trained ImageNet Dataset resnet-50 pth file first and put this pth file in resnet_pretrained_pth/ folder.
+you should download the pre-trained ImageNet Dataset resnet-50 pth file first and put this pth file in `resnet_pretrained_pth/` folder.
 #### C.2 Train Rotation-RetinaNet Detector on SSDD or HRSC Dataset with pre-trained pth file
 ```
 # train model on SSDD dataset from scratch
@@ -136,7 +136,7 @@ python eval.py --Dataset HRSC --config_file ./configs/retinanet_r50_fpn_hrsc.yml
 ```
 ## :bulb:Inferences
 Thanks for these great work.
-[https://github.com/open-mmlab/mmrotate](https://github.com/open-mmlab/mmrotate)
+[https://github.com/open-mmlab/mmrotate](https://github.com/open-mmlab/mmrotate)  
 [https://github.com/ming71/Rotated-RetinaNet](https://github.com/ming71/Rotated-RetinaNet)
 
-## Zhihu Link
+## :fast\_forward:Zhihu Link
