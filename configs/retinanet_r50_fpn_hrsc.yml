@@ -1,0 +1,62 @@
+backbone: {'type': 'resnet50',
+           'pretrained': True}
+
+neck: {'type': 'fpn',
+       'init_method': 'xavier_init',
+       'extra_conv_init_method': 'xavier_init'}
+
+head: {'type': 'retinanet',
+       'num_stacked': 4,
+       'cls_branch_init_method': 'normal_init',
+       'reg_branch_init_method': 'normal_init'}
+
+loss: {'cls': {'alpha': 0.25, 'gamma': 2.0},
+       'reg': {'type': 'smooth'}}
+
+
+assigner: {'pos_iou_thr': 0.3,
+           'neg_iou_thr': 0.2,
+           'min_pos_iou': 0.0,
+           'low_quality_match': True}
+
+# warmup settings
+warm_up: True
+warmup_epoch: 2
+warmup_lr: 0.00001
+
+# data settings
+dataset: HRSC
+classes: ['ship']
+image_size: 512
+keep_ratio: False
+batch_size: 16
+augment: False
+
+data_path: '{Data Root Path.}'
+output_path: '{Project Output Path.}'
+# weight the delta values.
+
+optimizer: adam
+lr: 0.0001
+epoch: 100
+evaluation_train_start: 101
+evaluation_val_start: 44
+save_interval: 4
+val_interval: 4
+eval_method: voc
+freeze_bn: True
+device: [3]
+
+# anchor settings
+base_size: 4
+ratios: [0.2, 0.5, 1.0, 2.0, 5.0]
+#ratios: [0.5, 1.0, 2.0]
+scales_per_octave: 3
+angle: 0  # opencv version > 4.5.1
+
+rotation_nms_thr: 0.5
+score_thr: 0.05
+
+tensorboard: 'tensorboard'
+checkpoint: 'checkpoints'
+log: 'log.log'
