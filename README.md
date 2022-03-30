@@ -15,11 +15,11 @@ This is an oriented detector **Rotation-RetinaNet** implementation on Optical an
 
 | Dataset | Backbone | Input Size | bs | Trick | mAP.5 | Config |
 |:-------:|:--------:|:----------:|:--:|:-----:|:-----:|:------:|
-|  SSDD   | ResNet-50| 512 x 512  | 16 | N     | 78.96 |[config file]("https://github.com/HsLOL/Rotation-RetinaNet-PyTorch/blob/master/configs/retinanet_r50_fpn_hrsc.yml")|
-|  SSDD   | ResNet-50| 512 x 512  | 16 |Augment| 85.6  |[config file]("./configs/retinanet_r50_fpn_ssdd.yml")|
-|  HRSC   | ResNet-50| 512 x 512  | 16 | N     | 70.71 |[config file]("./configs/retinanet_r50_fpn_hrsc.yml")|
-|  HRSC   | ResNet-50| 512 x 512  | 4  | N     | 74.22 |[config file]("./configs/retinanet_r50_fpn_hrsc.yml")|
-|  HRSC   | ResNet-50| 512 x 512  | 16 |Augment| 80.20 |[config file]("./configs/retinanet_r50_fpn_hrsc.yml")|
+|  SSDD   | ResNet-50| 512 x 512  | 16 | N     | 78.96 |[config file](/configs/retinanet_r50_fpn_hrsc.yml)|
+|  SSDD   | ResNet-50| 512 x 512  | 16 |Augment| 85.6  |[config file](/configs/retinanet_r50_fpn_ssdd.yml)|
+|  HRSC   | ResNet-50| 512 x 512  | 16 | N     | 70.71 |[config file](/configs/retinanet_r50_fpn_hrsc.yml)|
+|  HRSC   | ResNet-50| 512 x 512  | 4  | N     | 74.22 |[config file](/configs/retinanet_r50_fpn_hrsc.yml)|
+|  HRSC   | ResNet-50| 512 x 512  | 16 |Augment| 80.20 |[config file](/configs/retinanet_r50_fpn_hrsc.yml)|
 
 ## :boom:Get Started
 ### Installation
@@ -135,7 +135,7 @@ python eval.py --Dataset SSDD --config_file ./configs/retinanet_r50_fpn_ssdd.yml
 python eval.py --Dataset HRSC --config_file ./configs/retinanet_r50_fpn_hrsc.yml --evaluate True --chkpt {epoch}_{step}.pth
 ```
 ## :bulb:Inferences
-Thanks for these great work.
+Thanks for these great work.  
 [https://github.com/open-mmlab/mmrotate](https://github.com/open-mmlab/mmrotate)  
 [https://github.com/ming71/Rotated-RetinaNet](https://github.com/ming71/Rotated-RetinaNet)
 
